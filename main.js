@@ -16,7 +16,6 @@ window.addEventListener("load", function () {
   init();
 });
 
-// class ProjectTile {}
 // class Particle {}
 // class Enemy {}
 // class Layer {}

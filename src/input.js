@@ -10,6 +10,8 @@ export class InputHandler {
         ) {
           this.game.keys.push(e.key);
           // console.log(this.game.keys);
+        } else if (e.key === " ") {
+          this.game.player.shootTop();
         }
       }.bind(this)
     );

@@ -7,13 +7,16 @@ window.addEventListener("load", function () {
   canvas.height = 500;
   const game = new Game(canvas.width, canvas.height);
   //animation loop
-  function init() {
+  let lastTime = 0;
+  function init(timeStamp) {
+    const deltaTime = timeStamp - lastTime;
+    lastTime = timeStamp;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    game.update();
+    game.update(deltaTime);
     game.draw(ctx);
     requestAnimationFrame(init);
   }
-  init();
+  init(0);
 });
 
 // class Particle {}
